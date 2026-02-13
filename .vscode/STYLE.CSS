@@ -1,0 +1,212 @@
+/* style.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5ede4;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.left-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f5ede4;
+  position: relative;
+}
+
+.brand-title {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 30px;
+  margin-top: 0;
+  align-self: flex-start;
+  margin-left: 80px;
+}
+
+.img-bg {
+  background: #9c6b39;
+  border-radius: 35% 35% 60% 60%;
+  width: 375px;
+  height: 500px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-shadow: 0 10px 36px rgba(80,60,24,0.10);
+}
+
+.model-img {
+  width: 340px;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 8px;
+  /* Replace or adjust as needed for your image! */
+}
+
+.right-section {
+  flex: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3ecdf;
+  min-width: 410px;
+}
+
+.form-container {
+  background: #fcf9f3;
+  padding: 48px 40px 32px 40px;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(60,50,23,0.09);
+  width: 420px;
+}
+
+.form-container h2 {
+  margin: 0 0 28px 0;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #272623;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 20px;
+}
+
+.google-btn, .email-btn {
+  background: #fff;
+  border: none;
+  box-shadow: 0 2px 8px rgba(80,60,24,0.13);
+  border-radius: 7px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: box-shadow 0.15s;
+}
+
+.google-btn:hover, .email-btn:hover {
+  box-shadow: 0 4px 16px rgba(80,60,24,0.21);
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 24px 0 16px 0;
+}
+
+.divider span {
+  color: #81775e;
+  font-weight: 600;
+  margin: 0 20px;
+  position: relative;
+  padding: 0 10px;
+}
+
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: #e0dacd;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+  flex: 1;
+  padding: 12px 12px;
+  border: none;
+  border-bottom: 2px solid #d4cabb;
+  background: transparent;
+  font-size: 1.05rem;
+  outline: none;
+  transition: border-color 0.16s;
+}
+
+input:focus {
+  border-bottom: 2px solid #9c6b39;
+  background: #fbf6f0;
+}
+
+.create-btn {
+  width: 100%;
+  margin-top: 18px;
+  background: #fff;
+  color: #272623;
+  border: none;
+  padding: 13px 0;
+  border-radius: 6px;
+  font-size: 1.13rem;
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(80,60,24,0.09);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.create-btn:hover {
+  background: #f5ede4;
+  color: #9c6b39;
+}
+
+.login-link {
+  margin-top: 18px;
+  text-align: center;
+  color: #897b67;
+  font-size: 0.98rem;
+}
+
+.login-link a {
+  color: #366bff;
+  text-decoration: none;
+  margin-left: 3px;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive - Adjust as needed */
+@media (max-width: 1100px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left-section, .right-section {
+    width: 100%;
+    min-width: 0;
+  }
+  .right-section {
+    min-width: 320px;
+  }
+}
